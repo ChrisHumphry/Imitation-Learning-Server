@@ -71,15 +71,15 @@ def get_angle_in_radians(angle, leg_angles):
         direction.append(math.radians(0)) if int(angle[-1]) > 50 else direction.append(math.radians(180))
         body_angle_in_radians = direction + body_angle_in_radians
         if body_angle_in_radians[0] < -2.0857: body_angle_in_radians[0] = -2.0857
-        if body_angle_in_radians[0] > 2.0857: body_angle_in_radians[0] = 2.0857
+        if body_angle_in_radians[0] > 1.8: body_angle_in_radians[0] = 1.8
         if body_angle_in_radians[1] < -2.0857: body_angle_in_radians[1] = -2.0857
-        if body_angle_in_radians[1] > 2.0857: body_angle_in_radians[1] = 2.0857
-        if body_angle_in_radians[2] < 0.01: body_angle_in_radians[2] = 0.01 # for making sure hand is straight and not going back
+        if body_angle_in_radians[1] > 1.8: body_angle_in_radians[1] = 1.8
+        if body_angle_in_radians[2] < 0.01: body_angle_in_radians[2] = 0.0087
         if body_angle_in_radians[2] > 1.5620: body_angle_in_radians[2] = 1.5620
         if body_angle_in_radians[3] < -1.5620: body_angle_in_radians[3] = -1.5620
         if body_angle_in_radians[3] > -0.0087: body_angle_in_radians[3] = -0.0087
         if body_angle_in_radians[4] < -1.5620: body_angle_in_radians[4] = -1.5620
-        if body_angle_in_radians[4] > -0.01: body_angle_in_radians[4] = -0.01
+        if body_angle_in_radians[4] > -0.0087: body_angle_in_radians[4] = -0.0087
         if body_angle_in_radians[5] < 0.0087: body_angle_in_radians[5] = 0.0087
         if body_angle_in_radians[5] > 1.5620: body_angle_in_radians[5] = 1.5620
         for angle in leg_angles:
